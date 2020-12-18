@@ -14,13 +14,35 @@ const locales = Object.assign(
 	}),
 );
 
-const lng =
-	typeof window !== 'undefined' && localStorage.getItem('lng')
-		? localStorage.getItem('lng')
-		: defaultLanguage;
+const detection = {
+	// order and from where user language should be detected
+	order: [
+		'querystring',
+		'cookie',
+		'localStorage',
+		'sessionStorage',
+		'navigator',
+		'htmlTag',
+		'path',
+		'subdomain',
+	],
+
+	// keys or params to lookup language from
+	lookupCookie: 'lng',
+	lookupLocalStorage: 'lng',
+	lookupFromPathIndex: 0,
+	lookupFromSubdomainIndex: 0,
+
+	// cache user language on
+	caches: ['localStorage', 'cookie'],
+	excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
+
+	// optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+	cookieOptions: { path: '/', sameSite: 'strict' },
+};
 
 i18next.use(LanguageDetector).init({
-	lng: lng,
+	detection: detection,
 	fallbackLng: defaultLanguage,
 	resources: locales,
 	ns: ['translations'],
