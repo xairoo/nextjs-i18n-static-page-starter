@@ -8,11 +8,11 @@ import { getAllLanguageSlugs, getLanguage } from '../../lib/lang';
 export default function LangIndex({ language }) {
 	return (
 		<Layout>
-			<h1 className="mt-5 mb-5 font-bold text-4xl">index.js</h1>
+			<h1 className="mt-5 mb-5 text-4xl font-bold">index.js</h1>
 			<div>
 				{i18next.t('language')}: {language}
 			</div>
-			<Link prefetch={false} href={language + '/test'}>
+			<Link prefetch={false} href={`/[lang]/test`} as={`/${language}/test`}>
 				<a className="text-blue-600">/{language}/test</a>
 			</Link>
 		</Layout>

@@ -28,7 +28,7 @@ const Layout = function ({ children, home }) {
 			<main>{children}</main>
 
 			{!home && (
-				<Link href={'/' + i18next.language}>
+				<Link href={`/[lang]`} as={`/${i18next.language}`}>
 					<a className="text-blue-600">{i18next.t('backTo')} /</a>
 				</Link>
 			)}
