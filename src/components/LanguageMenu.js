@@ -19,7 +19,7 @@ const LanguageMenu = (props) => {
 				const path = pathname.replace(/\[lang\]/i, lang);
 
 				return (
-					<Link key={index} prefetch={false} href={path}>
+					<Link key={index} prefetch={false} href={pathname} as={path}>
 						<a className={classes.concat(current).join(' ').trim()}>{i18next.t(lang)}</a>
 					</Link>
 				);
