@@ -1,9 +1,9 @@
 {
-	"siteMeta": {
-		"title": "Titel / DE"
-	},
-	"site": "Seite",
-	"backTo": "Zurück zu",
-	"helloWorld": "Hallo Welt!",
-	"language": "Sprache"
+  "siteMeta": {
+    "title": "Titel / DE"
+  },
+  "site": "Seite",
+  "backTo": "Zurück zu",
+  "helloWorld": "Hallo Welt!",
+  "language": "Sprache"
 }
