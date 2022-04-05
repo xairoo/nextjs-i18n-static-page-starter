@@ -24,12 +24,10 @@ const Layout = function ({ children, home }) {
       <header>
         <h1>{i18next.t('siteMeta.title')}</h1>
       </header>
-
       <main>{children}</main>
-
       {!home && (
         <Link href={`/[lang]`} as={`/${i18next.language}`}>
-          <a className="text-blue-600">{i18next.t('backTo')} /</a>
+          <a>{i18next.t('backTo')} /</a>
         </Link>
       )}
     </>

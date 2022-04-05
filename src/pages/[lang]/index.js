@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import i18next from 'i18next';
-
 import Layout from '../../components/Layout';
 import { getAllLanguageSlugs, getLanguage } from '../../lib/lang';
 
@@ -13,7 +11,7 @@ export default function LangIndex({ language }) {
         {i18next.t('language')}: {language}
       </div>
       <Link prefetch={false} href={`/[lang]/test`} as={`/${language}/test`}>
-        <a className="text-blue-600">/{language}/test</a>
+        <a>/{language}/test</a>
       </Link>
     </Layout>
   );

@@ -1,15 +1,18 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* purgecss end ignore */
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
-  color: #202020;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
 }

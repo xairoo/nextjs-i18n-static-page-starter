@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import i18next from 'i18next';
-
+import 'twin.macro';
 import { getAllLanguageSlugs, getLanguage } from '../../lib/lang';
-
 import Layout from '../../components/Layout';
 
-const Test = (props) => {
+const Test = () => {
   return (
     <Layout>
-      <h1 className="mt-5 mb-5 font-bold text-4xl">test.js</h1>
+      <h1 tw="mt-5 mb-5 font-bold text-4xl">test.js</h1>
       <p>{i18next.t('helloWorld')}</p>
     </Layout>
   );
