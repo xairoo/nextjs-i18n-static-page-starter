@@ -2,6 +2,12 @@
   "name": "nextjs-i18n-static-page-starter",
   "version": "0.1.0",
   "author": "Marcel Zurreck",
+  "license": "MIT",
+  "homepage": "https://github.com/Xairoo/nextjs-i18n-static-page-starter",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Xairoo/nextjs-i18n-static-page-starter.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
