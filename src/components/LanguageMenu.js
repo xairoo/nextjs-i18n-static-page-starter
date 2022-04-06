@@ -4,14 +4,11 @@ import { useRouter } from 'next/router';
 import tw from 'twin.macro';
 
 import i18next from 'i18next';
-
 import { languages } from '../i18n/config';
 
 const LanguageMenu = (props) => {
   const router = useRouter();
   const { pathname } = router;
-
-  const classes = ['text-1xl', 'md:text-base', 'm-0.5', 'p-0.5'];
 
   return (
     <div tw="flex flex-wrap content-end text-gray-300">
