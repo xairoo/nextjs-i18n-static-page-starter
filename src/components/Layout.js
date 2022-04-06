@@ -18,11 +18,11 @@ const Layout = function ({ children, home }) {
         <meta name="description" content="Learn how to build a personal website using Next.js" />
         <meta name="og:title" content={i18next.t('siteMeta.title')} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />{' '}
-        <title>{i18next.t('siteMeta.title')}</title>
+        <title>{i18next.t('title', { ns: 'meta' })}</title>
       </Head>
       <LanguageMenu />
       <header>
-        <h1>{i18next.t('siteMeta.title')}</h1>
+        <h1>{i18next.t('title', { ns: 'meta' })}</h1>
       </header>
       <main>{children}</main>
       {!home && (
