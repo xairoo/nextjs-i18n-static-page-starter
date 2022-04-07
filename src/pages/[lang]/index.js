@@ -1,16 +1,19 @@
-import Link from 'next/link';
 import i18next from 'i18next';
-import Layout from '../../components/Layout';
+import 'twin.macro';
+import Link from '../../components/link';
+import Layout from '../../components/layout';
 import { getAllLanguageSlugs, getLanguage } from '../../lib/lang';
 
 export default function LangIndex({ language }) {
+  const { t } = i18next;
+
   return (
     <Layout>
-      <h1 className="mt-5 mb-5 text-4xl font-bold">index.js</h1>
+      <h2 tw="mt-5 mb-5 font-bold text-2xl">index.js</h2>
       <div>
-        {i18next.t('language')}: {language}
+        {t('language')}: {language}
       </div>
-      <Link prefetch={false} href={`/[lang]/test`} as={`/${language}/test`}>
+      <Link href="/test">
         <a>/{language}/test</a>
       </Link>
     </Layout>

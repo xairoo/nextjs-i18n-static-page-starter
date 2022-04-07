@@ -1,19 +1,18 @@
-import React from 'react';
 import i18next from 'i18next';
-import 'twin.macro';
 import { getAllLanguageSlugs, getLanguage } from '../../lib/lang';
-import Layout from '../../components/Layout';
+import 'twin.macro';
+import Layout from '../../components/layout';
 
-const Test = () => {
+export default function Test() {
+  const { t } = i18next;
+
   return (
     <Layout>
-      <h1 tw="mt-5 mb-5 font-bold text-4xl">test.js</h1>
-      <p>{i18next.t('helloWorld')}</p>
+      <h2 tw="mt-5 mb-5 font-bold text-2xl">test.js</h2>
+      <p>{t('helloWorld')}</p>
     </Layout>
   );
-};
-
-export default Test;
+}
 
 export async function getStaticPaths() {
   const paths = getAllLanguageSlugs();

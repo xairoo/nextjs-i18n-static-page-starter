@@ -26,6 +26,8 @@ Clone the repository and run `npm ci` (recommend) or `npm install`.
 Run `npm run dev` to start the development server on [http://localhost:3000](http://localhost:3000).  
 Visit [http://localhost:3000](http://localhost:3000) to view this starter.
 
+There is a custom wrapper for `<Link>` that will handle the i18n linking, just replace `next/link` with `src/components/link`.
+
 ## Build and Export Static Pages
 
 ```bash
