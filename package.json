@@ -13,7 +13,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "serve": "serve out"
+    "serve": "serve out",
+    "standard": "standard"
   },
   "dependencies": {
     "i18next": "^21.6.14",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "babel-plugin-macros": "^3.1.0",
+    "standard": "^16.0.4",
     "tailwindcss": "^3.0.23",
     "twin.macro": "^2.8.2"
   }

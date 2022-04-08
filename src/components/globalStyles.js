@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro';
+import { createGlobalStyle } from 'styled-components'
+import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro'
 
 const CustomStyles = createGlobalStyle`
   body {
@@ -20,13 +20,13 @@ const CustomStyles = createGlobalStyle`
   h2 {
     ${tw`text-2xl font-bold mt-10 mb-2 border-b-2 border-b-purple-500`}
   }
-`;
+`
 
 const GlobalStyles = () => (
   <>
     <BaseStyles />
     <CustomStyles />
   </>
-);
+)
 
-export default GlobalStyles;
+export default GlobalStyles

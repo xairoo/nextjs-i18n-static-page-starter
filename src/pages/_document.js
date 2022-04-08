@@ -1,13 +1,13 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
+export default function Document () {
   return (
     <Html>
       <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
-          rel="stylesheet"
+          href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap'
+          rel='stylesheet'
         />
       </Head>
       <body>
@@ -15,5 +15,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }
