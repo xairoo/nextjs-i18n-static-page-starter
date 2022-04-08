@@ -1,10 +1,10 @@
-import i18next from "i18next";
-import { languages } from "../i18n/config";
-import tw from "twin.macro";
-import Link from "./link";
+import i18next from 'i18next'
+import { languages } from '../i18n/config'
+import tw from 'twin.macro'
+import Link from './link'
 
 const LanguageMenu = (props) => {
-  const { t } = i18next;
+  const { t } = i18next
 
   return (
     <div tw="flex flex-wrap content-end text-gray-300">
@@ -20,10 +20,10 @@ const LanguageMenu = (props) => {
               {t(lang)}
             </a>
           </Link>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default LanguageMenu;
+export default LanguageMenu

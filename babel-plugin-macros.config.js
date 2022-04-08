@@ -1,6 +1,6 @@
 module.exports = {
   twin: {
-    preset: "styled-components",
+    preset: 'styled-components',
     autoCssProp: false,
   },
-};
+}
