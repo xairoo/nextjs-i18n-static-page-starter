@@ -1,23 +1,30 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const LinkComponent = ({ children, skipLocaleHandling, ...props }) => {
+const LinkComponent = ({ children, locale, ...props }) => {
   const router = useRouter();
 
-  const lang = props.lang || router.query.lang || '';
+  const lang = router.query.lang || '';
 
-  let href = props.href || router.asPath;
+  let href = props.href || router.pathname;
 
-  if (href.indexOf('http') === 0) {
-    skipLocaleHandling = true;
+  if (locale) {
+    if (props.href) {
+      href = `/${locale}${href}`;
+    } else {
+      href = router.pathname.replace('[lang]', locale);
+    }
+  } else {
+    href = `/${lang}${href}`;
   }
 
-  if (lang && !skipLocaleHandling) {
-    href = href ? `/${lang}${href}` : router.pathname.replace('[lang]', locale);
-    href = href.replace('//', '/');
-  }
+  href = href.replace('//', '/');
 
-  return <Link href={href}>{children}</Link>;
+  return (
+    <Link href={href} passHref>
+      {children}
+    </Link>
+  );
 };
 
 export default LinkComponent;

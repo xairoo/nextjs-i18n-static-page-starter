@@ -15,7 +15,7 @@ const LanguageMenu = (props) => {
         const path = pathname.replace(/\[lang\]/i, '').replace('//', '/');
 
         return (
-          <Link key={index} href={path} lang={lang}>
+          <Link key={index} locale={lang}>
             <a
               css={[
                 tw`text-base m-0.5 p-0.5 cursor-pointer uppercase`,
