@@ -18,7 +18,8 @@ const LinkComponent = ({ children, locale, ...props }) => {
     href = `/${lang}${href}`
   }
 
-  href = href.replace('//', '/')
+  // Fix double slashes
+  href = href.replace(/([^:]\/)\/+/g, '$1')
 
   return (
     <Link href={href} passHref>
