@@ -5,6 +5,7 @@ import 'twin.macro'
 import i18next from 'i18next'
 import { defaultLanguage, languages } from '../i18n'
 import Layout from '../components/layout'
+import Link from '../components/link'
 
 function Custom404() {
   const router = useRouter()
@@ -41,6 +42,9 @@ function Custom404() {
           ns: 'error',
         })}
       </div>
+      <Link href="/test">
+        <a>/{language}/test</a>
+      </Link>
     </Layout>
   )
 }

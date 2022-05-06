@@ -1,16 +1,21 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { defaultLanguage, languages } from '../i18n'
 
 const LinkComponent = ({ children, locale, ...props }) => {
   const router = useRouter()
-  const { pathname, query } = router
+  const { pathname, query, asPath } = router
 
-  const lang = query.lang || ''
+  // Detect current language
+  const slug = asPath.split('/')[1]
+  const langSlug = languages.includes(slug) && slug
+  const language = query.lang || langSlug || defaultLanguage
 
   let href = props.href || pathname
 
   if (locale) {
     if (props.href) {
+      console.log(1, href)
       href = `/${locale}${href}`
     } else {
       if (pathname.startsWith('/404')) {
@@ -20,7 +25,13 @@ const LinkComponent = ({ children, locale, ...props }) => {
       }
     }
   } else {
-    href = `/${lang}${href}`
+    if (language) {
+      console.log(3, href, language)
+      href = `/${language}${href}`
+    } else {
+      console.log(4, href, language)
+      href = `/${href}`
+    }
   }
 
   // Fix double slashes
