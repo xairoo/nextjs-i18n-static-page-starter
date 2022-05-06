@@ -2,5 +2,7 @@
   "site": "Site",
   "backTo": "Back to",
   "helloWorld": "Hello world!",
-  "language": "Language"
+  "language": "Language",
+  "de": "Deutsch",
+  "en": "English"
 }

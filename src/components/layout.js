@@ -17,7 +17,7 @@ const Layout = function ({ children }) {
           name="description"
           content="Learn how to build a personal website using Next.js"
         />
-        <meta name="og:title" content={t('siteMeta.title')} />
+        <meta name="og:title" content={t('title', { ns: 'meta' })} />
         <meta
           name="viewport"
           content="initial-scale=1.0, width=device-width"
@@ -25,18 +25,28 @@ const Layout = function ({ children }) {
         <title>{t('title', { ns: 'meta' })}</title>
       </Head>
       <LanguageMenu />
-
       <header>
         <h1 tw="my-10 font-bold text-4xl">{t('title', { ns: 'meta' })}</h1>
       </header>
-
       <main>{children}</main>
 
-      {router.pathname !== '/[lang]' && (
-        <Link href="/">
-          <a>{t('backTo')} /</a>
-        </Link>
-      )}
+      <ul>
+        {router.pathname !== '/[lang]' && (
+          <li>
+            <Link href="/">
+              <a>{t('backTo')} /</a>
+            </Link>
+          </li>
+        )}
+
+        {router.pathname !== '/404' && (
+          <li>
+            <Link href="/404">
+              <a>/404</a>
+            </Link>
+          </li>
+        )}
+      </ul>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import i18next from 'i18next'
-import { getAllLanguageSlugs, getLanguage } from '../../lib/lang'
+import { getAllLanguageSlugs, getLanguage } from '../../i18n'
 import 'twin.macro'
 import Layout from '../../components/layout'
 

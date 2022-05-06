@@ -7,6 +7,9 @@ import {
   defaultNamespace,
 } from './config'
 
+export { languages, defaultLanguage, namespaces, defaultNamespace }
+
+// Load all locales
 const locales = Object.assign(
   {},
   ...Object.keys(languages).map((index) => {
@@ -57,7 +60,7 @@ const detection = {
   cookieOptions: { path: '/', sameSite: 'strict' },
 }
 
-i18next.use(LanguageDetector).init({
+export default i18next.use(LanguageDetector).init({
   detection: detection,
   fallbackLng: defaultLanguage,
   resources: locales,
@@ -73,4 +76,12 @@ i18next.use(LanguageDetector).init({
   },
 })
 
-export default i18next
+export function getAllLanguageSlugs() {
+  return languages.map((lang) => {
+    return { params: { lang: lang } }
+  })
+}
+
+export function getLanguage(lang) {
+  return languages.includes(lang) ? lang : defaultLanguage
+}
