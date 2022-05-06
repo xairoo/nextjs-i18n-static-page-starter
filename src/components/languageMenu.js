@@ -1,9 +1,9 @@
 import i18next from 'i18next'
-import { languages } from '../i18n/config'
+import { languages } from '../i18n'
 import tw from 'twin.macro'
 import Link from './link'
 
-const LanguageMenu = (props) => {
+const LanguageMenu = () => {
   const { t } = i18next
 
   return (
