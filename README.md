@@ -11,6 +11,7 @@ Packages included:
 - [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
 - [twin.macro](https://github.com/ben-rogerson/twin.macro)
 - [styled-components](https://github.com/styled-components/styled-components)
+- Custom 404 page with i18n support
 
 ## Installation
 
