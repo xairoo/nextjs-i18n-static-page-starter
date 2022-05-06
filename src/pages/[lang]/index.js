@@ -11,7 +11,7 @@ export default function LangIndex({ language }) {
     <Layout>
       <h2 tw="mt-5 mb-5 font-bold text-2xl">index.js</h2>
       <div>
-        {t('language')}: {language}
+        {t('language')}: {t(language)} ({language})
       </div>
       <Link href="/test">
         <a>/{language}/test</a>

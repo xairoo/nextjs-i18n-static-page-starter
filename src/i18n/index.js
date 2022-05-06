@@ -60,7 +60,7 @@ const detection = {
   cookieOptions: { path: '/', sameSite: 'strict' },
 }
 
-i18next.use(LanguageDetector).init({
+export default i18next.use(LanguageDetector).init({
   detection: detection,
   fallbackLng: defaultLanguage,
   resources: locales,
@@ -75,8 +75,6 @@ i18next.use(LanguageDetector).init({
     wait: true,
   },
 })
-
-export default i18next
 
 export function getAllLanguageSlugs() {
   return languages.map((lang) => {
