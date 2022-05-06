@@ -18,8 +18,9 @@ Clone the repository and run `npm ci` (recommend) or `npm install`.
 
 ## Configuration
 
-- Set the supported languages, default language, namespaces and default namespace in `/src/i18n/config.js`.
-- Locales are located in `/src/locales/`. Split the `.json` translation file(s) into multiple namespaces to prevent mess.
+- Set the supported languages, default language, namespaces and default namespace in `/src/i18n/config.js`
+- Locales are located in `/src/locales/`
+  - To prevent mess, you can split the `.json` translation file(s) into multiple namespaces
 
 ## Development
 

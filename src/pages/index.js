@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import i18next from 'i18next'
-// import { getSortedLangsData } from "../lib/lang";
 
 export default function Home({ allLangsData }) {
   const router = useRouter()
@@ -15,12 +14,3 @@ export default function Home({ allLangsData }) {
 
   return null
 }
-
-// export async function getStaticProps() {
-//   const allLangsData = getSortedLangsData();
-//   return {
-//     props: {
-//       allLangsData,
-//     },
-//   };
-// }

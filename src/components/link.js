@@ -3,23 +3,28 @@ import { useRouter } from 'next/router'
 
 const LinkComponent = ({ children, locale, ...props }) => {
   const router = useRouter()
+  const { pathname, query } = router
 
-  const lang = router.query.lang || ''
+  const lang = query.lang || ''
 
-  let href = props.href || router.pathname
+  let href = props.href || pathname
 
   if (locale) {
     if (props.href) {
       href = `/${locale}${href}`
     } else {
-      href = router.pathname.replace('[lang]', locale)
+      if (pathname.startsWith('/404')) {
+        href = `/${locale}`
+      } else {
+        href = pathname.replace('[lang]', locale)
+      }
     }
   } else {
     href = `/${lang}${href}`
   }
 
   // Fix double slashes
-  href = href.replace(/([^:]\/)\/+/g, '$1')
+  href = href.replace(/([^:]\/)\/+/g, '$1').replace('//', '/')
 
   return (
     <Link href={href} passHref>
