@@ -1,3 +1,15 @@
+> 🔥🔥🔥  
+> I released a better solution: [next-i18next-static-site](https://www.npmjs.com/package/next-i18next-static-site)  
+> This package brings you `react-i18next` and `i18next` to your static sites build with the `next export` future from Next.js.  
+>  
+> - 🗲 Translation is already rendered (SSG), client will receive the final translated site.  
+> - 🔥 Hot reload works also when you update your locale (translation) files.  
+> - 🚀 Automatic browser language detection can be realized.  
+> - 🍪 Cookie stores the client language.  
+>  
+> It's highly recommend to use [next-i18next-static-site](https://www.npmjs.com/package/next-i18next-static-site) instead of this starter if you want to use all functions from `react-i18next`.
+
+
 # Next.js i18n Starter for Static Pages
 
 This starter allows you to use the `next export` future from `Next.js` in combination with `i18n` to create a complete static site.
